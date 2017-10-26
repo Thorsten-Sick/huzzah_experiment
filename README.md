@@ -1,6 +1,10 @@
 # huzzah_experiment
 
-I got a Huzzah board and a bunch of sensors that need to be tested. I also want to test-drive Micro Python
+I got a Huzzah Feather board and a bunch of sensors that need to be tested. I also want to test-drive Micro Python
+
+(https://learn.adafruit.com/adafruit-feather-huzzah-esp8266)
+
+Pinout: https://learn.adafruit.com/assets/46249
 
 ## Serial connection
 
@@ -23,6 +27,8 @@ https://www.adafru.it/169
 https://www.adafruit.com/product/189
 
 ### Humidity/temperature sensor (DHT22 AM2302)
+
+The DHT has an own driver.
 
 ### Fast Vibration Sensor Switch
 https://www.adafru.it/1766
