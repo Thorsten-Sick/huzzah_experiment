@@ -18,6 +18,14 @@ Running a script on the ESP8266 and doing a "print" will directly write to seria
 ## Package: Huzzah starter kit
 https://www.adafruit.com/product/2680
 
+### Button and LED
+Special feature: It is possible to internally use PULL_UP resistor, reducing stuff that needs to be put to the breadboard.
+
+pins can be set by the on/off method or by the value method to set the value.
+
+Wiring:
+In the example button goes to Pin5 and ground. LED goes to Pin 4, 560 Ohm resistor, and power.
+
 ### Micro servo
 https://www.adafru.it/169
 
@@ -28,7 +36,13 @@ https://www.adafruit.com/product/189
 
 ### Humidity/temperature sensor (DHT22 AM2302)
 
-The DHT has an own driver.
+Connecting the DHT to ESP like that:
+http://static.cactus.io/img/hookups/arduino/hookup-arduino-to-dht22-sensor.jpg
+
+The DHT has an own driver. Two flavours, one for DHT11, one for DHT22.
+
+More:
+http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html#dht-driver
 
 ### Fast Vibration Sensor Switch
 https://www.adafru.it/1766
@@ -38,8 +52,6 @@ https://www.adafru.it/1766
 ### Photo cell light sensors
 
 ### 10k Trim Potentiometer
-
-### LEDs
 
 ## Micro Python
 ### First Flash
@@ -80,10 +92,11 @@ A serial connection and "REPL" is directly available after install.
 
 #### Code files
 
-First boot.py is executed after boot. Then main.py
+First boot.py is executed after boot. Then main.py. Let's edit and push main.py
 
 To edit files, ampy can be used. Pre-set the port with
 ```
 export AMPY_PORT=/dev/tty.SLAB_USBtoUART
+ampy put main.py
 ```
 to simplify the process.
