@@ -26,13 +26,26 @@ pins can be set by the on/off method or by the value method to set the value.
 Wiring:
 In the example button goes to Pin5 and ground. LED goes to Pin 4, 560 Ohm resistor, and power.
 
-### Micro servo
-https://www.adafru.it/169
+Code is not de-bounced !
 
 ### Door sensor
 
+Works like a button. Closes when magnet is close to the sensor. Can use the button program
+
 ### PIR Sensor
 https://www.adafruit.com/product/189
+https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/
+
+Coding wise the same as with the button, as the data is binary. Data line of the sensor goes to the pin. 5 V power supply is at the USB pin of the huzzah board. According to doc data will be set to 3 V.
+
+### Fast Vibration Sensor Switch
+https://www.adafruit.com/product/1766
+
+
+### Micro servo
+https://www.adafru.it/169
+
+
 
 ### Humidity/temperature sensor (DHT22 AM2302)
 
@@ -44,8 +57,7 @@ The DHT has an own driver. Two flavours, one for DHT11, one for DHT22.
 More:
 http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html#dht-driver
 
-### Fast Vibration Sensor Switch
-https://www.adafru.it/1766
+
 
 ### Piezo Buzzer
 
