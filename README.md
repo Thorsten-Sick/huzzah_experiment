@@ -41,10 +41,19 @@ Coding wise the same as with the button, as the data is binary. Data line of the
 ### Fast Vibration Sensor Switch
 https://www.adafruit.com/product/1766
 
+TODO: Re-check
 
 ### Micro servo
 https://www.adafru.it/169
+http://www.towerpro.com.tw/product/sg92r-7/
 
+Quote: Position "0" (1.5ms pulse) is middle, "90" (~2ms pulse) is all the way to the right, "-90" (~1ms pulse) is all the way to the left.
+
+https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/pwm.html#control-a-hobby-servo
+
+Trick: Set frequency to 50. Play with the duty cycle to control the servo. For my servo the range seems to be from about 30 to 130.
+
+Also: Give it some time (time.sleep) to move to it's position before sending the next command.
 
 
 ### Humidity/temperature sensor (DHT22 AM2302)
