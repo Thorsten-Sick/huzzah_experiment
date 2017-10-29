@@ -70,9 +70,19 @@ http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html#dht-driver
 
 ### Piezo Buzzer
 
+Basically works like the servo. Setting frequency and duty cycle. Hint: Duty cycle of 512 is center point: Off phase is as long as on phase. Use that.
+
+There is no example code for that. See servo code.
+
 ### Photo cell light sensors
 
+https://learn.adafruit.com/photocells/overview
+
+There is one analog in pin labeled ADC. Connect to that. Wiring the photocell is already "advanced" - there is one resistor involved. See Arduino document.
+
 ### 10k Trim Potentiometer
+
+
 
 ## Micro Python
 ### First Flash
