@@ -82,7 +82,9 @@ There is one analog in pin labeled ADC. Connect to that. Wiring the photocell is
 
 ### 10k Trim Potentiometer
 
+https://www.arduino.cc/en/Tutorial/Potentiometer
 
+I had to add a voltage divider resistor (from middle "data" connection of potentiometer to ground) to get reasonable data. But basically it works just like the poto cell. Reading analog data.
 
 ## Micro Python
 ### First Flash
