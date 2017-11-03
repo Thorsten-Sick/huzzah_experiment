@@ -21,6 +21,11 @@ https://www.adafruit.com/product/2680
 ### Button and LED
 Special feature: It is possible to internally use PULL_UP resistor, reducing stuff that needs to be put to the breadboard.
 
+```
+import machine
+button = machine.Pin(12, machine.Pin.IN, machine.Pin.PULL_UP)
+```
+
 pins can be set by the on/off method or by the value method to set the value.
 
 Wiring:
@@ -86,6 +91,31 @@ https://www.arduino.cc/en/Tutorial/Potentiometer
 
 I had to add a voltage divider resistor (from middle "data" connection of potentiometer to ground) to get reasonable data. But basically it works just like the poto cell. Reading analog data.
 
+## Additional toys
+
+### Rotary encoder
+
+I got one of those:
+http://www.hobbytronics.co.uk/rotary-encoder
+(encoder plus push button)
+
+http://bildr.org/2012/08/rotary-encoder-arduino/
+
+Python code to reading the encoder can be found here:  https://forum.micropython.org/viewtopic.php?t=1704
+
+Hooking it up: http://bildr.org/2012/08/rotary-encoder-arduino/
+
+### LCD display
+
+### LED display
+
+### LED matrix
+
+### Neopixel
+
+## Network coding
+
+
 ## Micro Python
 ### First Flash
 
@@ -133,3 +163,17 @@ export AMPY_PORT=/dev/tty.SLAB_USBtoUART
 ampy put main.py
 ```
 to simplify the process.
+
+#### Optional: compile firmware
+
+https://learn.adafruit.com/building-and-running-micropython-on-the-esp8266/build-firmware
+
+Change from docujment there:
+```
+cd ~/micropython
+git submodule update --init
+make -C mpy-cross
+cd ~/micropython/esp8266    # Path now is ~/micropython/ports/esp8266
+make axtls
+make
+```
