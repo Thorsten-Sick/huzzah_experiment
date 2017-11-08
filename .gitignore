@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+# My stuff
+esp8266-micropython-vagrant/
+esp8266-micropython-vagrant/*
+secrets.py
