@@ -105,7 +105,39 @@ Python code to reading the encoder can be found here:  https://forum.micropython
 
 Hooking it up: http://bildr.org/2012/08/rotary-encoder-arduino/
 
-### LCD display
+### OLED display
+
+https://www.amazon.de/gp/product/B01L9GC470/
+
+"AZDelivery 128 x 64 Pixel 0,96 Zoll OLED I2C Display für Arduino und Raspberry Pi mit gratis eBook "
+
+Coding: https://www.hackster.io/hendra/ssd1306-oled-for-esp32-with-micropython-32b5fe
+
+SSD 1306 display controller
+128x64 pixel
+I2C bus
+1Mb Ram
+
+SCL: Clock   -> Pin 5
+SDA: Data    -> Pin 4
+VCC: 3,3 V
+GND: GND
+
+```
+# 0,0 is upper left, y is down
+
+from machine import Pin,I2C
+import ssd1306
+i2c = I2C(scl=Pin(5), sda=Pin(4), freq=100000)
+lcd = ssd1306.SSD1306_I2C(128,64,i2c)
+lcd.text("Micropython",0,0)
+lcd.show()
+lcd.rect(10,10,40,80,1)  #  last is color(white)
+lcd.show()
+```
+
+For drawing:
+https://docs.micropython.org/en/latest/esp8266/library/framebuf.html
 
 ### LED display
 
@@ -128,9 +160,16 @@ np.write()    # !!!! Relevant or pixel will not change
 
 ## Network coding
 
+https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/network_basics.html#configuration-of-the-wifi
+
 ## MQTT
 
 ### Moquitto/Paho
+
+(not enough space for that on huzzah board)
+```
+pip install paho-mqtt
+```
 
 ```
 import paho.mqtt.client as paho
