@@ -113,8 +113,49 @@ Hooking it up: http://bildr.org/2012/08/rotary-encoder-arduino/
 
 ### Neopixel
 
+https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/neopixel.html
+
+
+```
+import machine
+import neopixel
+
+np = neopixel.NeoPixel(machine.Pin(4), 1)
+np[0] = (0,200,100)    # RGB value for first pixel
+np.write()    # !!!! Relevant or pixel will not change
+
+```
+
 ## Network coding
 
+## MQTT
+
+### Moquitto/Paho
+
+```
+import paho.mqtt.client as paho
+
+client = paho.Client()
+```
+
+### Adafruit-io
+
+https://github.com/adafruit/io-client-python
+
+(This one is a special Adafruit library)
+
+### umqtt
+
+https://home-assistant.io/blog/2016/07/28/esp8266-and-micropython-part1/
+https://home-assistant.io/blog/2016/08/31/esp8266-and-micropython-part2/
+
+uMQTT has SSL code already - but not yet in release version. See:
+
+```
+c = MQTTClient(client_id = "umqtt_client", server = "test.mosquitto.org", port = 8883, ssl = True, ssl_params={"cert_reqs":ssl.CERT_REQUIRED, "ca_certs":"/flash/cert/ca.pem"})
+```
+
+from https://forum.micropython.org/viewtopic.php?f=11&t=2310&p=13172#p13172
 
 ## Micro Python
 ### First Flash
